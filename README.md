@@ -1,3 +1,5 @@
+## idea执行该工程1. gradle init —type pom2. build.gradle中增加  configurations { providedCompile }，否则会报错找不到providedCompile method3. 创建web工程- file - project structure - new module 选择当前工程- file - project structure - artifact 选择from module,同时将output中添加static目录，否则找不到login.html- run  - edit configuration,配置tomcat,选择local4. 修改 controller.js中的  tradeService.connect("/spring-websocket-portfolio-master/portfolio")                       为  tradeService.connect("/portfolio")   否则，会报错info 请求无法访问4045. 完成
+
 ## Overview
 
 A sample demonstrating capabilities in the Spring Framework to build WebSocket-style messaging applications. The application uses [STOMP](http://stomp.github.io/) (over WebSocket) for messaging between browsers and server and [SockJS](https://github.com/sockjs/sockjs-protocol) for WebSocket fallback options.
